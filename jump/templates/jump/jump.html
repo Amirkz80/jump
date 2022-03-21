@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+
+<html lang="eng" onclick="jump()">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1, shrink-to-fit=no">
+  
+  <title>jUMP</title>
+
+  <link rel="stylesheet" href="{% static 'styles/jump.css' %}">
+
+</head>
+  
+
+<body>
+
+  <div id="time">
+    <h1><span>Time : </span><span id="timeAmount">00:00:00</span></h1>
+  </div>
+
+  <div id="buttons">
+    <button id="button" onclick="reloadPage()">Play Again</button>
+  </div>
+  
+  <div id="game">
+
+    <div id="dinosaur"></div>
+    <div id="block"></div>
+  
+  </div>
+  
+
+  <script>
+    // Add an event listener so if player pushes space the object jump
+    document.addEventListener('keyup', e => {
+    if (e.code === 'Space'){
+      jump();
+    }
+    })
+  </script>
+  
+  <script src="{% static 'js/jump.js' %}"></script>
+
+</body>
+
+</html>
